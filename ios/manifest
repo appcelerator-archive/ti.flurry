@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.3.1
+description: Flurry event reporting module
+author: Jeff Haynie and Dawson Toth
+license: Apache License, Version 2.0
+copyright: Copyright (c) 2010-2013 by Appcelerator, Inc.
+
+
+# these should not be edited
+name: flurry
+moduleid: ti.flurry
+guid: fead338e-8f4c-4d9e-80b3-ae8aa5e8776b
+platform: iphone
+minsdk: 1.6.0
