@@ -9,7 +9,7 @@
 #import "TiHost.h"
 #import "TiUtils.h"
 #import "TiApp.h"
-#import "FlurryAnalytics.h"
+#import "Flurry.h"
 
 @interface TiFlurryModule : TiModule
 {
