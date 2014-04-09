@@ -3,12 +3,19 @@ before_install:
     - MODULE_ROOT=$PWD
 install: 
     - mkdir -p /Library/Application\ Support/Titanium/sdks/
+    
+    # Android SDK seems to require newer version of SDK
     - wget http://builds.appcelerator.com/mobile/3_1_X/mobilesdk-3.1.4.v20140324130912-osx.zip -O /Library/Application\ Support/Titanium/mobilesdk-3.1.4-osx.zip
     - cd /Library/Application\ Support/Titanium/
     - unzip -o  mobilesdk-3.1.4-osx.zip
     - mv mobilesdk/osx/3.1.4.v20140324130912 mobilesdk/osx/3.1.4
-    - export TITANIUM_SDK=${PWD}/mobilesdk/osx/3.1.4/android
+    
+    # IOS uses v.1.6
+    - wget http://api.appcelerator.net/p/v1/release-download?token=y4qAVWK3 -O /Library/Application\ Support/Titanium/mobilesdk-1.6.0-osx.zip
+    - cd /Library/Application\ Support/Titanium/
+    - unzip -o mobilesdk-1.6.0-osx.zip
 
+    # Install Android SDK
     - cd /Library/Application\ Support/Titanium/sdks/
     - wget http://dl.google.com/android/android-sdk_r22.6.2-macosx.zip
     - unzip -o android-sdk_r22.6.2-macosx.zip
@@ -19,23 +26,17 @@ install:
     # Install required Android components.
     - echo "y" | android update sdk --filter platform-tools,android-10,addon-google_apis-google-10,extra-android-support,$ANDROID_SDKS --no-ui --force
     
-    - cd ${MODULE_ROOT}
+    # Install require Android NDK
     - wget http://dl.google.com/android/ndk/android-ndk-r9d-darwin-x86.tar.bz2
     - tar xzf android-ndk-r9d-darwin-x86.tar.bz2
     - export ANDROID_NDK=${PWD}/android-ndk-r9d
     
-    #- export CLASSPATH=${CLASSPATH}:${ANDROID_HOME}/platforms/android-10/android.jar
-    #- export CLASSPATH=${CLASSPATH}:${ANDROID_HOME}/add-ons/addon-google_apis-google-10/libs/maps.jar"
-    #- export CLASSPATH=${CLASSPATH}:${TITANIUM_SDK}/titanium.jar
-    #- export CLASSPATH=${CLASSPATH}:${TITANIUM_SDK}/kroll-common.jar
-    #- export CLASSPATH=${CLASSPATH}:${TITANIUM_SDK}/kroll-apt.jar
-    #- export CLASSPATH=${CLASSPATH}:${MODULE_ROOT}/android/lib/flurryAnalytics_3.4.0.jar
-    
 before_script:
     - cd $MODULE_ROOT
 script: 
-    #- cd ./ios/
-    #- ./build.py
-    - cd ./android/
+    - cd $MODULE_ROOT/ios/
+    - ./build.py
+    
+    - cd $MODULE_ROOT/android/
     - ant clean
     - ant
