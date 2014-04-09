@@ -6,9 +6,9 @@
 	<classpathentry kind="con" path="lib/flurryAnalytics_3.4.0.jar"/>
 	<classpathentry kind="lib" path="${ANDROID_HOME}/platforms/android-10/android.jar"/>
 	<classpathentry kind="lib" path="${ANDROID_HOME}/add-ons/addon-google_apis-google-10/libs/maps.jar"/>
-	<classpathentry kind="lib" path="/Library/Application Support/Titanium/mobilesdk/osx/3.2.2.GA/android/titanium.jar"/>
-	<classpathentry kind="lib" path="/Library/Application Support/Titanium/mobilesdk/osx/3.2.2.GA/android/kroll-common.jar"/>
-	<classpathentry kind="lib" path="/Library/Application Support/Titanium/mobilesdk/osx/3.2.2.GA/android/kroll-apt.jar"/>
+	<classpathentry kind="lib" path="/Library/Application Support/Titanium/mobilesdk/osx/1.6.0/android/titanium.jar"/>
+	<classpathentry kind="lib" path="/Library/Application Support/Titanium/mobilesdk/osx/1.6.0/android/kroll-common.jar"/>
+	<classpathentry kind="lib" path="/Library/Application Support/Titanium/mobilesdk/osx/1.6.0/android/kroll-apt.jar"/>
 	<classpathentry kind="src" path=".apt_generated">
 		<attributes>
 			<attribute name="optional" value="true"/>
