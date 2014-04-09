@@ -7,7 +7,7 @@ install:
     - cd /Library/Application\ Support/Titanium/
     - unzip -o  mobilesdk-1.6.3-osx.zip
     - export TITANIUM_SDK=${PWD}/mobilesdk/osx/1.6.3/android
-    - echo "${TITANIUM_SDK}"
+    - echo ${TITANIUM_SDK}
     - cd /Library/Application\ Support/Titanium/sdks/
     - wget http://dl.google.com/android/android-sdk_r22.6.2-macosx.zip
     - unzip -o android-sdk_r22.6.2-macosx.zip
@@ -30,8 +30,9 @@ install:
     - export CLASSPATH=${CLASSPATH}:${TITANIUM_SDK}/kroll-common.jar
     - export CLASSPATH=${CLASSPATH}:${TITANIUM_SDK}/kroll-apt.jar
     - export CLASSPATH=${CLASSPATH}:${MODULE_ROOT}/android/lib/flurryAnalytics_3.4.0.jar
-    - echo "${CLASSPATH}"
+    
 before_script:
+    - echo ${CLASSPATH}
     - cd $MODULE_ROOT
 script: 
     #- cd ./ios/
