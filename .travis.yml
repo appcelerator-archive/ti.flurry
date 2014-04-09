@@ -5,8 +5,8 @@ install:
     - mkdir -p /Library/Application\ Support/Titanium/sdks/
     - wget http://builds.appcelerator.com/mobile/1_6_X/mobilesdk-1.6.3-20110524190802-osx.zip -O /Library/Application\ Support/Titanium/mobilesdk-1.6.0-osx.zip
     - cd /Library/Application\ Support/Titanium/
-    - unzip -o  mobilesdk-1.6.0-osx.zip
-    - export TITANIUM_SDK=${PWD}/mobilesdk/osx/1.6.0/android
+    - unzip -o  mobilesdk-1.6.3-20110524190802-osx.zip
+    - export TITANIUM_SDK=${PWD}/mobilesdk/osx/1.6.3/android
     - cd /Library/Application\ Support/Titanium/sdks/
     - wget http://dl.google.com/android/android-sdk_r22.6.2-macosx.zip
     - unzip -o android-sdk_r22.6.2-macosx.zip
