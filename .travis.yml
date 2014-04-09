@@ -6,10 +6,11 @@ install:
     - wget http://api.appcelerator.net/p/v1/release-download?token=y4qAVWK3 -O /Library/Application\ Support/Titanium/mobilesdk-1.6.0-osx.zip
     - cd /Library/Application\ Support/Titanium/
     - unzip -o  mobilesdk-1.6.0-osx.zip
+    - export TITANIUM_SDK=${PWD}/mobilesdk/osx/1.6.0/android
     - cd /Library/Application\ Support/Titanium/sdks/
     - wget http://dl.google.com/android/android-sdk_r22.6.2-macosx.zip
     - unzip -o android-sdk_r22.6.2-macosx.zip
-    - export ANDROID_HOME=$PWD/android-sdk-macosx
+    - export ANDROID_HOME=${PWD}/android-sdk-macosx
     - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
     # Install required Android components.
@@ -18,7 +19,14 @@ install:
     - cd /Library/Application\ Support/Titanium/sdks/
     - wget http://dl.google.com/android/ndk/android-ndk-r9d-darwin-x86.tar.bz2
     - tar xzf android-ndk-r9d-darwin-x86.tar.bz2
-    - export ANDROID_NDK=$PWD/android-ndk-r9d
+    - export ANDROID_NDK=${PWD}/android-ndk-r9d
+    
+    - export CLASSPATH=${CLASSPATH}:${ANDROID_HOME}/platforms/android-10/android.jar"
+    #- export CLASSPATH=${CLASSPATH}:${ANDROID_HOME}/add-ons/addon-google_apis-google-10/libs/maps.jar"
+    - export CLASSPATH=${CLASSPATH}:${TITANIUM_SDK}/titanium.jar
+    - export CLASSPATH=${CLASSPATH}:${TITANIUM_SDK}/kroll-common.jar
+    - export CLASSPATH=${CLASSPATH}:${TITANIUM_SDK}/kroll-apt.jar
+    - export CLASSPATH=${CLASSPATH}:${$MODULE_ROOT}/android/lib/flurryAnalytics_3.4.0.jar
 before_script:
     - cd $MODULE_ROOT
 script: 
