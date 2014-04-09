@@ -36,4 +36,5 @@ script:
     #- cd ./ios/
     #- ./build.py
     - cd ./android/
+    - ant clean
     - ant
