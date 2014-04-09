@@ -3,7 +3,7 @@ before_install:
     - MODULE_ROOT=$PWD
 install: 
     - mkdir -p /Library/Application\ Support/Titanium/sdks/
-    - wget http://api.appcelerator.net/p/v1/release-download?token=y4qAVWK3 -O /Library/Application\ Support/Titanium/mobilesdk-1.6.0-osx.zip
+    - wget http://builds.appcelerator.com/mobile/1_6_X/mobilesdk-1.6.3-20110524190802-osx.zip -O /Library/Application\ Support/Titanium/mobilesdk-1.6.0-osx.zip
     - cd /Library/Application\ Support/Titanium/
     - unzip -o  mobilesdk-1.6.0-osx.zip
     - export TITANIUM_SDK=${PWD}/mobilesdk/osx/1.6.0/android
