@@ -9,3 +9,5 @@ xcuserdata
 *.xcuserstate
 *.xcuserdata*
 .project
+.settings
+.classpath
