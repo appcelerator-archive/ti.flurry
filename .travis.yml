@@ -19,7 +19,7 @@ install:
     # Install required Android components.
     - echo "y" | android update sdk --filter platform-tools,android-10,addon-google_apis-google-10,extra-android-support,$ANDROID_SDKS --no-ui --force
     
-    - cd /Library/Application\ Support/Titanium/sdks/
+    - cd ${MODULE_ROOT}
     - wget http://dl.google.com/android/ndk/android-ndk-r9d-darwin-x86.tar.bz2
     - tar xzf android-ndk-r9d-darwin-x86.tar.bz2
     - export ANDROID_NDK=${PWD}/android-ndk-r9d
