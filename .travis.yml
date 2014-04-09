@@ -31,6 +31,7 @@ install:
     #- export CLASSPATH=${CLASSPATH}:${MODULE_ROOT}/android/lib/flurryAnalytics_3.4.0.jar
     
 before_script:
+    - ls -ltr /Library/Application\ Support/Titanium/sdks/android-sdk-macosx/platforms/android-10/
     - cd $MODULE_ROOT
 script: 
     #- cd ./ios/
