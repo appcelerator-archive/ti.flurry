@@ -11,3 +11,5 @@ before_script:
 script: 
     - cd ./ios/
     - ./build.py
+    - cd ../android/
+    - ant
