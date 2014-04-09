@@ -1,4 +1,4 @@
-language: java
+language: objective-c
 before_install:
     - MODULE_ROOT=$PWD
 install: 
