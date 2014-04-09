@@ -9,7 +9,7 @@ install:
     - cd $MODULE_ROOT
     - wget http://dl.google.com/android/android-sdk_r22.6.2-macosx.zip
     - unzip -o android-sdk_r22.6.2-macosx.zip
-    - export ANDROID_HOME=$PWD/android-sdk_r22.6.2-macosx
+    - export ANDROID_HOME=$PWD/android-sdk-macos
     - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
     # Install required Android components.
