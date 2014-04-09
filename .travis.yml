@@ -3,10 +3,11 @@ before_install:
     - MODULE_ROOT=$PWD
 install: 
     - mkdir -p /Library/Application\ Support/Titanium/sdks/
-    - wget http://builds.appcelerator.com/mobile/3_1_X/mobilesdk-3.1.3.v20130909184609-osx.zip -O /Library/Application\ Support/Titanium/mobilesdk-3.1.3-osx.zip
+    - wget http://builds.appcelerator.com/mobile/3_1_X/mobilesdk-3.1.4.v20140324130912-osx.zip -O /Library/Application\ Support/Titanium/mobilesdk-3.1.4-osx.zip
     - cd /Library/Application\ Support/Titanium/
-    - unzip -o  mobilesdk-3.1.3-osx.zip
-    - export TITANIUM_SDK=${PWD}/mobilesdk/osx/3.1.3/android
+    - unzip -o  mobilesdk-3.1.4-osx.zip
+    - mv mobilesdk/osx/3.1.4.v20140324130912 mobilesdk/osx/3.1.4
+    - export TITANIUM_SDK=${PWD}/mobilesdk/osx/3.1.4/android
 
     - cd /Library/Application\ Support/Titanium/sdks/
     - wget http://dl.google.com/android/android-sdk_r22.6.2-macosx.zip
@@ -31,7 +32,7 @@ install:
     #- export CLASSPATH=${CLASSPATH}:${MODULE_ROOT}/android/lib/flurryAnalytics_3.4.0.jar
     
 before_script:
-    - cd /Library/Application\ Support/Titanium/mobilesdk/osx/3.1.3/android
+    - cd /Library/Application\ Support/Titanium/mobilesdk/osx/3.1.4/android
     - ls -ltr /Library/Application\ Support/Titanium/sdks/android-sdk-macosx/platforms/android-10/
     - cd $MODULE_ROOT
 script: 
