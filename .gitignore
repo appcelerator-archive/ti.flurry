@@ -10,3 +10,5 @@ xcuserdata
 *.xcuserdata*
 .project
 .settings
+android/libs/**
+build.properties
