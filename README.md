@@ -24,7 +24,7 @@ By default, Flurry will only log upon subsequent runs of the application and
 caches logged data on the device.  You can force Flurry to attempt to send
 data upon exit of the app by calling the following API:
 
-    Titanium.Flurry.reportOnClose(true);
+    Flurry.reportOnClose(true);
 
 ### Custom Event Logging
 
