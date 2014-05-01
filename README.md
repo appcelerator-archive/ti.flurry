@@ -9,7 +9,7 @@ To setup your app, you need to initialize the module with your
 Flurry application API key.  You should place this command in your 
 app.js:
 
-    var Flurry = ("ti.flurry");
+    var Flurry = require("ti.flurry");
     Flurry.initialize("YOUR_API_KEY");
 
 Make sure you replace YOUR_API_KEY with your *actual* key.
