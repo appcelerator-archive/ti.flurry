@@ -1,13 +1,8 @@
 language: objective-c
-before_install:
-    - MODULE_ROOT=$PWD
 install: 
-    - mkdir -p /Library/Application\ Support/Titanium/
+    - mkdir -p ~/Library/Application\ Support/Titanium/
     - wget http://api.appcelerator.com/p/v1/release-download?token=f4GkvCk2 -O /Library/Application\ Support/Titanium/mobilesdk-3.2.3.GA-osx.zip
-    - cd /Library/Application\ Support/Titanium/
-    - unzip -o mobilesdk-3.2.3.GA-osx.zip
-before_script:
-    - cd $MODULE_ROOT
+    - unzip -o -q mobilesdk-3.2.3.GA-osx.zip -d ~/Library/Application\ Support/Titanium/
 script: 
     - cd ./ios/
     - ./build.py
