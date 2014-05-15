@@ -2,7 +2,7 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.4.0
+version: 1.4.1
 description: Flurry event reporting module
 author: Jeff Haynie and Dawson Toth
 license: Apache License, Version 2.0
