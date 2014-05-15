@@ -1,12 +1,13 @@
 language: objective-c
-install: 
-    - mkdir -p ~/Library/Application\ Support/Titanium/
-    - wget http://api.appcelerator.com/p/v1/release-download?token=f4GkvCk2 -O /Library/Application\ Support/Titanium/mobilesdk-3.2.3.GA-osx.zip
-    - unzip -o -q mobilesdk-3.2.3.GA-osx.zip -d ~/Library/Application\ Support/Titanium/
+env:
+ global:
+   - "MODULE_NAME=ti.flurry" 
+before_install:
+    - MODULE_ROOT=$PWD
+install:
+    - cd $MODULE_ROOT
+    - curl -o install.sh https://raw.githubusercontent.com/appcelerator-modules/ci/master/travis/install.sh
+    - source install.sh -s "3.2.3.GA"
 script: 
-    - cd ./ios/
-    - ./build.py
-    
-    - cd $MODULE_ROOT/android/
-    - ant clean
-    - ant
+    - curl -o script.sh https://raw.githubusercontent.com/appcelerator-modules/ci/master/travis/script.sh
+    - source script.sh
