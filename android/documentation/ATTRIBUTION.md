@@ -3,7 +3,7 @@
 #### Flurry.
  Developer's use of the Flurry SDK is governed by the license in the applicable Flurry Terms of Service. Some components of the SDK are governed by open source software licenses. In the event of any conflict between the license in the applicable Flurry Terms of Service and the applicable open source license, the terms of the open source license shall prevail with respect to those components. 
 
- The Flurry SDK contains Jansson, Copyright (c) 2009-2011 Petri Lehtinen <petri@digip.org>
+ The Flurry SDK contains Jansson, Copyright (c) 2009-2014 Petri Lehtinen <petri@digip.org>
 
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights
  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:

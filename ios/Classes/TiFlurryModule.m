@@ -31,6 +31,13 @@
 	[Flurry startSession:apiKey];
 }
 
+-(void)initializeWithCrashReporting:(id)apiKey
+{
+	ENSURE_SINGLE_ARG(apiKey, NSString);
+	[Flurry setCrashReportingEnabled:YES];
+	[Flurry startSession:apiKey];
+}
+
 # pragma mark Public Properties
 
 -(void)setUserID:(id)value
