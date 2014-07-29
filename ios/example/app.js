@@ -8,8 +8,13 @@ var Flurry = require('ti.flurry');
 Flurry.debugLogEnabled = true;
 Flurry.eventLoggingEnabled = true;
 
-Flurry.initialize('ND1292FY4ULRQF5PU4ZQ' /*<-- PUT YOUR OWN API KEY HERE!*/);
+// See Flurry.initializeWithCrashReporting('<key>') below
+//Flurry.initialize('ND1292FY4ULRQF5PU4ZQ' /*<-- PUT YOUR OWN API KEY HERE!*/);
 
+// To initialize with Crash Reporting.
+// NOTE: iOS only allows one crash reporting tool per app; 
+//       if using another, use Flurry.initialize('<key>') instead.
+Flurry.initializeWithCrashReporting('ND1292FY4ULRQF5PU4ZQ' /*<-- PUT YOUR OWN API KEY HERE!*/);
 Flurry.reportOnClose = true;
 Flurry.sessionReportsOnPauseEnabled = true;
 Flurry.secureTransportEnabled = false;

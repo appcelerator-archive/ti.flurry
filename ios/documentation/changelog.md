@@ -1,5 +1,7 @@
 # Change Log
 <pre>
+v1.4.2	Updated to the latest version of Flurry (5.2.0.a)
+
 v1.4.1	[TIMODOPEN-315] Updated to the latest version of Flurry (5.0.0.a)
 
 v1.4	[MOD-146] Updated to the latest version of Flurry (4.4.0)
