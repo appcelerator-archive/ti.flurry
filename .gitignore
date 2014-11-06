@@ -9,3 +9,7 @@ xcuserdata
 *.xcuserstate
 *.xcuserdata*
 .project
+.settings
+android/libs/**
+build.properties
+.idea

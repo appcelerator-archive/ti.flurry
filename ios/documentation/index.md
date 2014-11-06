@@ -47,6 +47,10 @@ latency from secure handshaking and encryption.
 ### initialize(string apiKey)
 Initializes your Flurry session. You must get your own apiKey from Flurry's website: https://dev.flurry.com/
 
+### initializeWithCrashReporting(string apiKey)
+Initializes your Flurry session. Enables Flurry to handle crash reporting. You must get your own apiKey from Flurry's website: https://dev.flurry.com/
+NOTE: iOS only allows one crash reporting tool per app; if using another, use Flurry.initialize('<key>') instead.
+
 ### logEvent(string event[, dictionary properties])
 Use logEvent to count the number of times certain events happen during a session of your application. This can be useful
 for measuring how often users perform various actions, for example. Your application is currently limited to counting
