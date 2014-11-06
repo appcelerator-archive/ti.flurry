@@ -1,5 +1,7 @@
 # Change Log
 <pre>
+v1.5	Updated to the latest version of Flurry (5.4.0.a). iOS8 Support.
+
 v1.4.2	Updated to the latest version of Flurry (5.2.0.a)
 
 v1.4.1	[TIMODOPEN-315] Updated to the latest version of Flurry (5.0.0.a)
