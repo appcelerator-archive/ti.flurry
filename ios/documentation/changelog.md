@@ -1,6 +1,6 @@
 # Change Log
 <pre>
-v1.6 	Updated module to support 64-bit
+v1.6.0 	[MOD-18092] Updated module to support 64-bit
 
 v1.5	Updated to the latest version of Flurry (5.4.0.a). iOS8 Support.
 
