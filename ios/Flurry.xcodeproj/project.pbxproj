@@ -231,6 +231,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
+				"ARCHS[sdk=iphoneos*]" = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = (
+					i386,
+					x86_64,
+				);
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DSTROOT = /tmp/TiFlurry.dst;
@@ -279,6 +287,14 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphoneos*]" = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = (
+					i386,
+					x86_64,
+				);
 				DSTROOT = /tmp/TiFlurry.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
