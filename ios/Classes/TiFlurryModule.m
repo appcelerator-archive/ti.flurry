@@ -89,16 +89,6 @@
 	[self setSessionReportsOnPauseEnabled:value];
 }
 
--(void)setSecureTransportEnabled:(id)value
-{
-    [Flurry setSecureTransportEnabled:[TiUtils boolValue:value]];
-}
--(void)secureTransportEnabled:(id)value
-{
-    ENSURE_SINGLE_ARG(value, NSObject);
-	[self setSecureTransportEnabled:value];
-}
-
 # pragma mark Public Methods
 
 -(void)trackLocation:(id)args
@@ -167,10 +157,18 @@
 	}
 }
 
--(void)logAllPageViews:(id)args
+-(void)logAllPageViewsForTarget:(id)args
 {
-    ENSURE_UI_THREAD(logAllPageViews, args);
-    [Flurry logAllPageViews:[[TiApp app] controller]];
+    ENSURE_UI_THREAD(logAllPageViewsForTarget, args);
+	id target = [args objectAtIndex:0];
+    [Flurry logAllPageViewsForTarget:target];
+}
+
+-(void)stopLogPageViewsForTarget:(id)args
+{
+    ENSURE_UI_THREAD(stopLogPageViewsForTarget, args);
+	id target = [args objectAtIndex:0];
+    [Flurry stopLogPageViewsForTarget:target];
 }
 
 -(void)logPageView:(id)args

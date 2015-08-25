@@ -4,6 +4,8 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
+#import <UIKit/UIKit.h>
+
 #import "TiModule.h"
 #import "TiBase.h"
 #import "TiHost.h"

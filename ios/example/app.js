@@ -17,7 +17,6 @@ Flurry.eventLoggingEnabled = true;
 Flurry.initializeWithCrashReporting('ND1292FY4ULRQF5PU4ZQ' /*<-- PUT YOUR OWN API KEY HERE!*/);
 Flurry.reportOnClose = true;
 Flurry.sessionReportsOnPauseEnabled = true;
-Flurry.secureTransportEnabled = false;
 
 Flurry.age = 24;
 Flurry.userID = 'John Adams';

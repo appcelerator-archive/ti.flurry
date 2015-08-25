@@ -28,11 +28,6 @@ Use this to log the user gender after identifying the user. Valid inputs are m f
 ### bool reportLocation
 Use this to allow Flurry to record location information in reports. Defaults to true.
 
-### bool secureTransportEnabled
-This option is off by default. When enabled, Flurry will send session data over SSL when the app is paused as well as it
-normally does when the app is started. This has the potential to prolong the app pause process due to added network
-latency from secure handshaking and encryption.
-
 ## Functions
 
 ### initialize(string apiKey)
