@@ -91,7 +91,7 @@
 
 -(void)setSecureTransportEnabled:(id)value
 {
-    [Flurry setSecureTransportEnabled:[TiUtils boolValue:value]];
+    NSLog(@"[ERROR] The property `secureTransportEnabled` was removed in 2.0.0. SSL is now used automatically by the native SDK.");
 }
 -(void)secureTransportEnabled:(id)value
 {
@@ -167,10 +167,10 @@
 	}
 }
 
--(void)logAllPageViews:(id)args
+-(void)logAllPageViews:(id)unused
 {
-    ENSURE_UI_THREAD(logAllPageViews, args);
-    [Flurry logAllPageViews:[[TiApp app] controller]];
+    ENSURE_UI_THREAD(logAllPageViews, unused);
+    [Flurry logAllPageViewsForTarget:[[TiApp app] controller]];
 }
 
 -(void)logPageView:(id)args

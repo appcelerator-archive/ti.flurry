@@ -1,5 +1,7 @@
 # Change Log
 <pre>
+v2.0	Updated to the latest version of Flurry (7.3.0.a). iOS9 Support.
+
 v1.5	Updated to the latest version of Flurry (5.4.0.a). iOS8 Support.
 
 v1.4.2	Updated to the latest version of Flurry (5.2.0.a)
