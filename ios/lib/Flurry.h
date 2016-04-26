@@ -26,8 +26,30 @@ typedef enum {
     FlurryEventUniqueCountExceeded,
     FlurryEventParamsCountExceeded,
     FlurryEventLogCountExceeded,
-    FlurryEventLoggingDelayed
+    FlurryEventLoggingDelayed,
+    FlurryEventAnalyticsDisabled
 } FlurryEventRecordStatus;
+
+
+/*!
+ *  @brief Enum for logging events that occur within a syndicated app
+ *  @since 6.7.0
+ *
+ */
+
+typedef enum {
+    FlurrySyndicationReblog      = 0,
+    FlurrySyndicationFastReblog  = 1,
+    FlurrySyndicationSourceClick = 2,
+    FlurrySyndicationLike        = 3,
+    FlurrySyndicationShareClick  = 4,
+    FlurrySyndicationPostSend    = 5
+    
+}FlurrySyndicationEvent;
+
+extern NSString* const kSyndicationiOSDeepLink;
+extern NSString* const kSyndicationAndroidDeepLink;
+extern NSString* const kSyndicationWebDeepLink;
 
 
 /*!
@@ -68,7 +90,7 @@ typedef enum {
  *  
  *  @note This class provides methods necessary for correct function of Flurry.h.
  *  For information on how to use Flurry's Ads SDK to
- *  attract high-quality users and monetize your user base see <a href=https://developer.yahoo.com/flurry/docs/howtos">Support Center - Publishers</a>.
+ *  attract high-quality users and monetize your user base see <a href="https://developer.yahoo.com/flurry/docs/howtos">Support Center - Publishers</a>.
  *  
  *  @author 2009 - 2013 Flurry, Inc. All Rights Reserved.
  *  @version 4.3.0
@@ -824,7 +846,7 @@ typedef enum {
  *
  *  @param userID The app id for a user.
  */
-+ (void)setUserID:(NSString *)userID;	
++ (void)setUserID:(NSString *)userID;
 
 /*!
  *  @brief Set your user's age in years.
@@ -971,6 +993,32 @@ typedef enum {
  *
  */
 + (void)setPulseEnabled:(BOOL)value;
+
+
+/*!
+ *  @brief Records a syndicated event specified by @c syndicationEvent.
+ *  @since 6.7.0
+ *
+ *  This method is excusively for use by the Tumblr App, calls from others app will be ignored.
+ *
+ *  @code
+ - (void) reblogButtonHandler
+ {
+ [Flurry logEvent:Reblog syndicationID:@"123", parameters:nil];
+ // Perform
+ }
+ *  @endcode
+ *
+ *  @param syndicationEvent syndication event.
+ *  @param syndicationID syndication ID that is associated with the event
+ *  @param parameters use this to pass in syndication parameters such as
+ *         kSyndicationiOSDeepLink, kSyndicationAndroidDeepLink, kSyndicationWebLinkDeepLink
+ *
+ *  @return enum FlurryEventRecordStatus for the recording status of the logged event.
+ */
++ (FlurryEventRecordStatus) logEvent:(FlurrySyndicationEvent) syndicationEvent syndicationID:(NSString*) syndicationID parameters:(NSDictionary*) parameters;
+
+
 
 //@}
 
