@@ -41,12 +41,13 @@ associate with the event.
 * Pedro Enrique
 * Jon Alter
 * Ayo Adesugba
+* Hans Knoechel
 
 Interested in contributing? Read the [contributors/committer's](https://wiki.appcelerator.org/display/community/Home) guide.
 
 ## Legal
 
-This module is Copyright (c) 2010 by Appcelerator, Inc. All Rights Reserved.
-Flurry is Copyright(c) 2010 by Flurry, Inc.  Usage of this module is subject to 
+This module is Copyright (c) 2010 - 2016 by Appcelerator, Inc. All Rights Reserved.
+Flurry is Copyright(c) 2010 - 2016 by Flurry, Inc.  Usage of this module is subject to 
 the Terms of Service agreement of Flurry, Inc. as well as your Terms of Service
 agreement with Appcelerator, Inc.  

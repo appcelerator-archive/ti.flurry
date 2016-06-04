@@ -28,6 +28,8 @@
 		24DE9E1211C5FE74003F90F6 /* TiFlurryModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* TiFlurryModuleAssets.m */; };
 		3A2588761C3DC612008A2927 /* libFlurry_7.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2588741C3DC612008A2927 /* libFlurry_7.3.0.a */; };
 		3A2588771C3DC621008A2927 /* Flurry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2588731C3DC612008A2927 /* Flurry.h */; };
+		3ABE58B31D039BEC000ECFC0 /* Flurry.h in Sources */ = {isa = PBXBuildFile; fileRef = 3A2588731C3DC612008A2927 /* Flurry.h */; };
+		3ABE58B41D039BEC000ECFC0 /* libFlurry_7.3.0.a in Sources */ = {isa = PBXBuildFile; fileRef = 3A2588741C3DC612008A2927 /* libFlurry_7.3.0.a */; };
 		7BC170CA131C2BF5005E4CE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC170C9131C2BF5005E4CE2 /* Foundation.framework */; };
 		AA747D9F0F9514B9006C5449 /* TiFlurry_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiFlurry_Prefix.pch */; };
 /* End PBXBuildFile section */
@@ -209,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ABE58B31D039BEC000ECFC0 /* Flurry.h in Sources */,
+				3ABE58B41D039BEC000ECFC0 /* libFlurry_7.3.0.a in Sources */,
 				24DD6CFA1134B3F500162E58 /* TiFlurryModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* TiFlurryModuleAssets.m in Sources */,
 			);
