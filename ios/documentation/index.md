@@ -37,11 +37,6 @@ it normally does when the app is started. This will improve the speed at which y
 but can prolong the app pause process due to network latency. In some cases, the network latency can cause the app to
 crash.
 
-### bool secureTransportEnabled
-This option is off by default. When enabled, Flurry will send session data over SSL when the app is paused as well as it
-normally does when the app is started. This has the potential to prolong the app pause process due to added network
-latency from secure handshaking and encryption.
-
 ## Functions
 
 ### initialize(string apiKey)
