@@ -5,6 +5,7 @@
  */
 
 #import "TiFlurryModule.h"
+#import "Flurry.h"
 
 @implementation TiFlurryModule
 
@@ -42,51 +43,56 @@
 
 -(void)setUserID:(id)value
 {
+    ENSURE_SINGLE_ARG(value, NSString);
     [Flurry setUserID:value];
-}
--(void)setUserId:(id)value
-{
-    [self setUserID:value];
 }
 
 -(void)setAge:(id)value
 {
+    ENSURE_SINGLE_ARG(value, NSNumber);
     [Flurry setAge:[TiUtils intValue:value]];
 }
 
 -(void)setGender:(id)value
 {
+    ENSURE_SINGLE_ARG(value, NSString);
     [Flurry setGender:value];
 }
 
 -(void)setDebugLogEnabled:(id)value
 {
+    ENSURE_SINGLE_ARG(value, NSNumber);
 	[Flurry setDebugLogEnabled:[TiUtils boolValue:value]];
 }
 
 -(void)setEventLoggingEnabled:(id)value
 {
+    ENSURE_SINGLE_ARG(value, NSNumber);
 	[Flurry setEventLoggingEnabled:[TiUtils boolValue:value]];
 }
 
 -(void)setReportOnClose:(id)value
 {
+    ENSURE_SINGLE_ARG(value, NSNumber);
 	[Flurry setSessionReportsOnCloseEnabled:[TiUtils boolValue:value]];
-}
--(void)reportOnClose:(id)value
-{
-    ENSURE_SINGLE_ARG(value, NSObject);
-	[self setReportOnClose:value];
 }
 
 -(void)setSessionReportsOnPauseEnabled:(id)value
 {
+    ENSURE_SINGLE_ARG(value, NSNumber);
 	[Flurry setSessionReportsOnPauseEnabled:[TiUtils boolValue:value]];
 }
--(void)sessionReportsOnPauseEnabled:(id)value
+
+#pragma mark Deprecated Properties
+
+-(void)setSecureTransportEnabled:(id)value
 {
-    ENSURE_SINGLE_ARG(value, NSObject);
-	[self setSessionReportsOnPauseEnabled:value];
+    NSLog(@"[ERROR] Ti.Flurry: The property `secureTransportEnabled` was removed in 2.0.0. SSL is now used automatically by the native SDK.");
+}
+
+-(void)setUserId:(id)value
+{
+    NSLog(@"[ERROR] Ti.Flurry: The property `userId` was removed in 2.0.0. Please use `userID` instead.");
 }
 
 # pragma mark Public Methods
@@ -103,20 +109,18 @@
 -(void)logEvent:(id)args
 {
     ENSURE_UI_THREAD(logEvent, args);
-	NSString *event = [args objectAtIndex:0];
-	NSDictionary *props = nil;
-	if ([args count] > 1)
-	{
-		props = [args objectAtIndex:1];
-	}
-	if (props == nil)
-	{
-		[Flurry logEvent:event];
-	}
-	else 
-	{
-		[Flurry logEvent:event withParameters:props];
-	}
+    NSString *event = [args objectAtIndex:0];
+    NSDictionary *props = nil;
+    
+    if ([args count] > 1) {
+        props = [args objectAtIndex:1];
+    }
+	
+    if (props == nil) {
+        [Flurry logEvent:event];
+    } else {
+        [Flurry logEvent:event withParameters:props];
+    }
 }
 
 -(void)logTimedEvent:(id)args
