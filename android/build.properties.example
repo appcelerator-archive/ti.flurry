@@ -1,3 +1,4 @@
-titanium.platform=/Library/Application Support/Titanium/mobilesdk/osx/3.5.0.GA/android
-android.platform=/Library/Application Support/Titanium/sdks/android-sdk-macosx/platforms/android-10
-google.apis=/Library/Application Support/Titanium/sdks/android-sdk-macosx/add-ons/addon-google_apis-google-10
+titanium.platform=/Library/Application Support/Titanium/mobilesdk/osx/6.0.0.v20160824153008/android
+android.platform=/Library/Application Support/Titanium/sdks/android-sdk-macosx/platforms/android-24
+google.apis=/Library/Application Support/Titanium/sdks/android-sdk-macosx/add-ons/addon-google_apis-google-23
+android.ndk=/Library/Application Support/Titanium/ndk/android-ndk-r12b
