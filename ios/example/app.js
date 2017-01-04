@@ -22,6 +22,8 @@ Flurry.age = 24;
 Flurry.userID = 'John Adams';
 Flurry.gender = 'm';
 
+Flurry.logError("Test Message Name","Test description");
+
 /**
  * Log a very simple click event.
  */

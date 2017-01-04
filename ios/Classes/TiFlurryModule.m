@@ -7,6 +7,7 @@
 #import "TiFlurryModule.h"
 #import "Flurry.h"
 
+
 @implementation TiFlurryModule
 
 #pragma mark Lifecycle
@@ -180,5 +181,23 @@
     ENSURE_UI_THREAD(logPageView, args);
     [Flurry logPageView];
 }
+    
+-(void)logError:(id)args
+{
+    ENSURE_ARG_COUNT(args, 2);
+    NSString *errorName = [args objectAtIndex:0];
+    NSString *errorMessage = [args objectAtIndex:1];
+    
+    NSException *exception = [NSException
+                              exceptionWithName:errorName
+                              reason:errorMessage
+                              userInfo:nil];
+    
+    
+   [Flurry logError:errorName message:errorMessage exception:exception];
+}
+    
+    
+    
 
 @end
