@@ -36,6 +36,14 @@ Where `event_name` is a string name of your event and where `parameters` (option
 is a Javascript dictionary of key value pairs (JSON serializable) that you want to 
 associate with the event.
 
+### Enable crash reporting
+
+Thanks to @wgriffiths for this. 
+
+If you have a look at the master branch you can use the initializeWithCrashReporting method to setup Flurry. You will then get crash reporting. If your using iOS you can only have one crash reporting system active so you will need to disable your google analytics crash reporting.
+
+    Flurry.initializeWithCrashReporting('API_KEY');
+
 ## Contributors
 
 * Pedro Enrique

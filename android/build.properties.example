@@ -1,3 +1,4 @@
-titanium.platform=/Users/priebe/Library/Application Support/Titanium/mobilesdk/osx/5.2.2.GA/android
-android.platform=/Applications/adt-bundle-mac-x86_64-20140702/sdk/platforms/android-23
-google.apis=/Applications/adt-bundle-mac-x86_64-20140702/sdk/add-ons/addon-google_apis-google-23
+titanium.platform=~/Library/Application Support/Titanium/mobilesdk/osx/6.0.1.GA/android
+android.platform=~/Library/Android/sdk/platforms/android-25
+google.apis=~/Library/Android/sdk/extras/google/google_play_services/
+android.ndk=~/Library/Android/sdk/ndk-bundle
