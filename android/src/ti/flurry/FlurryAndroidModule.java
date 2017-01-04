@@ -80,23 +80,12 @@ public class FlurryAndroidModule extends KrollModule
 		// put module init code that needs to run when the application is created
 	}
 	
-	@Override
-	public void onDestroy(Activity activity) 
-	{
-		// This method is called when the root context is being destroyed
-
-		Log.d(TAG, "FlurryAndroidModule destroy");
-
-		super.onDestroy(activity);
-		FlurryAgent.onEndSession(this.getActivity());
-	}
-
 	// Methods
 	@Kroll.method
 	public void initialize(String key)
 	{
 		Log.d(TAG, "initialize called");
-		FlurryAgent.onStartSession(this.getActivity(), key);
+		FlurryAgent.init (this.getActivity(), key);
 	}
 	
 	@Kroll.method
@@ -243,12 +232,6 @@ public class FlurryAndroidModule extends KrollModule
 	public void setEventLoggingEnabled(Boolean value) {
 		Log.d(TAG, "set Flurry EventLoggingEnabled: " + value);
 		FlurryAgent.setLogEvents(value);
-	}
-	
-	@Kroll.setProperty
-	public void setSecureTransportEnabled(Boolean value) {
-		Log.d(TAG, "set Flurry SecureTransportEnabled: " + value);
-		FlurryAgent.setUseHttps(value);
 	}
 	
 	@Kroll.setProperty

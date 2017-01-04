@@ -10,8 +10,6 @@ Flurry.eventLoggingEnabled = true;
 
 Flurry.initialize('ND1292FY4ULRQF5PU4ZQ' /*<-- PUT YOUR OWN API KEY HERE!*/);
 
-Flurry.secureTransportEnabled = false;
-
 Flurry.age = 24;
 Flurry.userID = 'John Adams';
 Flurry.gender = 'm';

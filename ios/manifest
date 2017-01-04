@@ -14,4 +14,4 @@ name: flurry
 moduleid: ti.flurry
 guid: fead338e-8f4c-4d9e-80b3-ae8aa5e8776b
 platform: iphone
-minsdk: 5.1.0
+minsdk: 5.2.2.GA

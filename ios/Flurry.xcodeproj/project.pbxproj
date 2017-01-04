@@ -64,6 +64,7 @@
 			files = (
 				3A2588761C3DC612008A2927 /* libFlurry_7.3.0.a in Frameworks */,
 				7BC170CA131C2BF5005E4CE2 /* Foundation.framework in Frameworks */,
+				17031D041CCEA1F2008B1438 /* libFlurry_7.6.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

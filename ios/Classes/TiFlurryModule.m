@@ -161,10 +161,18 @@
 	}
 }
 
--(void)logAllPageViews:(id)unused
+-(void)logAllPageViewsForTarget:(id)args
 {
-    ENSURE_UI_THREAD(logAllPageViews, unused);
-    [Flurry logAllPageViewsForTarget:[[TiApp app] controller]];
+    ENSURE_UI_THREAD(logAllPageViewsForTarget, args);
+	id target = [args objectAtIndex:0];
+    [Flurry logAllPageViewsForTarget:target];
+}
+
+-(void)stopLogPageViewsForTarget:(id)args
+{
+    ENSURE_UI_THREAD(stopLogPageViewsForTarget, args);
+	id target = [args objectAtIndex:0];
+    [Flurry stopLogPageViewsForTarget:target];
 }
 
 -(void)logPageView:(id)args

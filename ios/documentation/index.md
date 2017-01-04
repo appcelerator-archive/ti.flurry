@@ -61,10 +61,13 @@ Use endTimedEvent to end timed event before app exists, otherwise timed events a
 ending the timed event, a new optional event parameters dictionary object can be used to update event parameters. To
 keep event parameters the same, do not pass in properties.
 
-### logAllPageViews()
-Enables the Flurry agent to automatically detect and log page views. Flurry agent will create a delegate on your app
-to detect user interactions. Each detected user interaction will automatically be logged as a page view. This only needs
-to be called in your application once.
+### logAllPageViewsForTarget(id target)
+This method increments the page view count for a session based on traversing a UINavigationController or UITabBarController. The page view count is only a counter for the number of transitions in your app. It does not associate a name with the page count. To associate a name with a count of occurences see logEvent.
+
+If you need to release passed target, you should call counterpart method stopLogPageViewsForTarget first.
+
+### stopLogPageViewsForTarget(id target)
+Stops logging page views on previously observed with logAllPageViewsForTarget: UINavigationController or UITabBarController.
 
 ### logPageView()
 Rather than using the logAllPageViews method, you can manually detect user interactions. For each user interaction you
