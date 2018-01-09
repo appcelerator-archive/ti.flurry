@@ -13,3 +13,4 @@ xcuserdata
 android/libs/**
 build.properties
 .idea
+/android/java-sources.txt

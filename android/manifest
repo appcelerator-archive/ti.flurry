@@ -2,18 +2,17 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 2.0.0
-apiversion: 3
-architectures: armeabi-v7a x86
+version: 3.0.0
+apiversion: 4
+architectures: arm64-v8a armeabi-v7a x86
 description: Flurry event reporting module
 author: Ayo Adesugba
 license: Apache License, Version 2.0
 copyright: Copyright (c) 2010-2014 by Appcelerator, Inc.
-
 
 # these should not be edited
 name: flurry_android
 moduleid: ti.flurry
 guid: cb18a7d2-baa4-4c0d-a0b1-b07b8676f2ec
 platform: android
-minsdk: 6.0.0
+minsdk: 7.0.0
